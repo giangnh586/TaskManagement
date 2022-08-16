@@ -1,7 +1,6 @@
 import { ConfigProvider } from 'antd';
 import 'antd/dist/antd.min.css';
 import locale from 'antd/lib/locale/vi_VN';
-import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './App';
