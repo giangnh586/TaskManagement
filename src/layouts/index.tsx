@@ -1,16 +1,13 @@
-import Header from "components/layouts/header";
-import MainBody from "components/layouts/main";
-
+import Header from 'components/layouts/header';
+import MainBody from 'components/layouts/main';
 
 const Layout = () => {
-
-    return(
-        <>
-        <Header/>
-        <MainBody/>
-        
-        </>
-        )
-}
+  return (
+    <>
+      <Header />
+      <MainBody />
+    </>
+  );
+};
 
 export default Layout;

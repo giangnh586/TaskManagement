@@ -1,11 +1,13 @@
 import Header from "./header";
+import MainBody from "./main";
 
 
 const Layout = () => {
 
     return(
         <>
-        <Header></Header>
+        <Header/>
+        <MainBody/>
         </>
         )
 }
