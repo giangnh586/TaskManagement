@@ -1,0 +1,8 @@
+.ant-menu-item:hover {
+    background-color:#bfbfbf !important;
+    /* opacity: 0.5 */
+}
+.ant-menu-item:hover{
+    width: 100%;
+    background-color: aqua;
+}
