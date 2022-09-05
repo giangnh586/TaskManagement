@@ -1,7 +1,5 @@
-import { Space } from "antd";
-import Layout, { Content, Header } from "antd/lib/layout/layout";
-import HeaderLeft from "./HeaderLeft";
-import HeaderRight from "./HeaderRight";
+import HeaderLeft from './HeaderLeft';
+import HeaderRight from './HeaderRight';
 
 const ContentHeader = () => {
   return (

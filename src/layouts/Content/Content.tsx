@@ -1,13 +1,15 @@
-import ContentHeader from "./ContentHeader";
-import Layout, { Content, Header } from "antd/lib/layout/layout";
-import { Space } from "antd";
+import ContentHeader from './ContentHeader';
+import Layout, { Content } from 'antd/lib/layout/layout';
+import ContentBody from './ContentBody';
 
 const MainContent = () => {
   return (
     <>
       <Layout className="bg-transparent max-w-full">
         <ContentHeader />
-        <Content></Content>
+        <Content>
+          <ContentBody />
+        </Content>
       </Layout>
     </>
   );

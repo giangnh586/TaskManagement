@@ -1,7 +1,44 @@
-import { SearchOutlined } from "@ant-design/icons";
-import { Button, Input, Menu } from "antd";
+import { SearchOutlined } from '@ant-design/icons';
+import { async } from '@firebase/util';
+import { Button, Input } from 'antd';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { useCallback, useContext, useEffect, useState } from 'react';
+import AuthContext from '../../components/store/auth-context';
+import { auth } from '../../firebase';
 
 const MainHeader = () => {
+  const authCtx = useContext(AuthContext);
+  const [islogin, setIsLogin] = useState(authCtx.isLoggedIn);
+  const name = localStorage.getItem('name') ?? '';
+  const email = localStorage.getItem('email') ?? '';
+  const img = localStorage.getItem('profilePic') ?? '';
+
+  //login
+  const provider = new GoogleAuthProvider();
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const name = result.user.displayName;
+        const email = result.user.email;
+        const profilePic = result.user.photoURL;
+
+        localStorage.setItem('token', 'loginconfirm');
+        localStorage.setItem('name', name ?? '');
+        localStorage.setItem('email', email ?? '');
+        localStorage.setItem('profilePic', profilePic ?? '');
+        setIsLogin(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const Login = () => {
+    signInWithGoogle();
+  };
+  console.log(islogin);
+
   return (
     <div className="bg-[#49494b] w-full h-full flex items-center">
       <Button className="border-none p-2 h-auto w-auto flex items-center hover:bg-[#808081]">
@@ -19,22 +56,8 @@ const MainHeader = () => {
             </linearGradient>
           </defs>
           <rect width="256" height="256" fill="url(#a)" rx="25" />
-          <rect
-            width="78.08"
-            height="112"
-            x="144.64"
-            y="33.28"
-            fill="#49494b"
-            rx="12"
-          />
-          <rect
-            width="78.08"
-            height="176"
-            x="33.28"
-            y="33.28"
-            fill="#49494b"
-            rx="12"
-          />
+          <rect width="78.08" height="112" x="144.64" y="33.28" fill="#49494b" rx="12" />
+          <rect width="78.08" height="176" x="33.28" y="33.28" fill="#49494b" rx="12" />
         </svg>
         <span className="text-white mx-2">TRELLO</span>
       </Button>
@@ -63,11 +86,16 @@ const MainHeader = () => {
             ></path>
           </svg>
         </Button>
-        <Button className="border-none p-2 h-auto w-auto flex items-center hover:bg-[#808081]">
-          <img
-            className="h-[32px] w-[32px] leading-[32px] rounded-[50%]"
-            src="https://lh3.googleusercontent.com/ogw/AOh-ky3zqWtXF7Tul9sD7dGTvW3frA5OmFiIPBTAw7Wf=s32-c-mo"
-          />
+
+        <Button
+          className="border-none p-2 h-auto w-auto flex items-center hover:bg-[#808081]"
+          onClick={Login}
+        >
+          {islogin ? (
+            <img className="h-[32px] w-[32px] leading-[32px] rounded-[50%]" src={img} alt="error" />
+          ) : (
+            <p className="text-white">Login</p>
+          )}
         </Button>
       </div>
     </div>
