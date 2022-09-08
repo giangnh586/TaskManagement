@@ -121,7 +121,7 @@ const HeaderLeft = () => {
           }
         >
           <div>
-            <button className="flex items-center px-[5px] py-[6px] bg-[#49494b] bg-opacity-[0.7] hover:bg-white hover:bg-opacity-70 rounded-[3px]">
+            <button className="flex items-center px-[5px] py-[6px] bg-[#49494b] bg-opacity-[0.7] hover:bg-[#0079bf] hover:bg-opacity-70 rounded-[3px]">
               <svg
                 width="16"
                 height="16"
@@ -131,20 +131,20 @@ const HeaderLeft = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M2 7V15C2 16.1046 2.89543 17 4 17H6C7.10457 17 8 16.1046 8 15V7C8 5.89543 7.10457 5 6 5H4C2.89543 5 2 5.89543 2 7ZM4 7V15H6V7L4 7Z"
                   fill="white"
                 ></path>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M9 7V13C9 14.1046 9.89543 15 11 15H13C14.1046 15 15 14.1046 15 13V7C15 5.89543 14.1046 5 13 5H11C9.89543 5 9 5.89543 9 7ZM11 7V13H13V7L11 7Z"
                   fill="white"
                 ></path>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M16 17V7C16 5.89543 16.8954 5 18 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H18C16.8954 19 16 18.1046 16 17ZM18 17V7L20 7V17H18Z"
                   fill="white"
                 ></path>
@@ -168,7 +168,7 @@ const HeaderLeft = () => {
         </Popover>
 
         <div
-          className="text-ellipsis whitespace-nowrap h-[32px] overflow-hidden rounded-[3px] hover:bg-white hover:bg-opacity-70 "
+          className="text-ellipsis whitespace-nowrap h-[32px] overflow-hidden rounded-[3px] hover:bg-[#0079bf] hover:bg-opacity-70 "
           onClick={onInput}
         >
           {!input && (
@@ -192,7 +192,7 @@ const HeaderLeft = () => {
         </div>
 
         <div
-          className="rounded-[3px] bg-[#4d4d4d] hover:bg-white hover:bg-opacity-70 flex justify-center h-[32px] w-[32px]"
+          className="rounded-[3px] bg-[#4d4d4d] hover:bg-[#0079bf] hover:bg-opacity-70 flex justify-center h-[32px] w-[32px]"
           onClick={starHandler}
         >
           <span className="items-center flex justify-center">
@@ -256,7 +256,7 @@ const HeaderLeft = () => {
             </div>
           }
         >
-          <div className="rounded-[3px] bg-[#4d4d4d] hover:bg-white hover:bg-opacity-70 h-[32px]">
+          <div className="rounded-[3px] bg-[#4d4d4d] hover:bg-[#0079bf] hover:bg-opacity-70 h-[32px]">
             <span className=" text-white overflow-hidden text-ellipsis whitespace-nowrap h-full flex items-center mx-[12px]">
               không gian làm việc của hoanggiangd13dt3
             </span>
@@ -411,7 +411,7 @@ const HeaderLeft = () => {
             </div>
           }
         >
-          <div className="rounded-[3px] bg-[#4d4d4d] hover:bg-white hover:bg-opacity-70 flex items-center p-[12px] h-[32px]">
+          <div className="rounded-[3px] bg-[#4d4d4d] hover:bg-[#0079bf] hover:bg-opacity-70 flex items-center p-[12px] h-[32px]">
             <span className="float-left">
               <svg
                 width="16"
@@ -458,7 +458,7 @@ const HeaderLeft = () => {
             </a>
           </div>
           <button
-            className=" flex justify-center h-[32px] hover:bg-white hover:bg-opacity-70 items-center rounded-[3px] px-2 bg-[#4d4d4d]"
+            className=" flex justify-center h-[32px] hover:bg-[#0079bf] hover:bg-opacity-70 items-center rounded-[3px] px-2 bg-[#4d4d4d]"
             onClick={() => setVisible(true)}
           >
             <span className="h-[16px] w-[16px]">
@@ -471,8 +471,8 @@ const HeaderLeft = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 9.44777 7.61532 10.7518 8.59871 11.6649C5.31433 13.0065 3 16.233 3 20C3 20.5523 3.44772 21 4 21H12C12.5523 21 13 20.5523 13 20C13 19.4477 12.5523 19 12 19H5.07089C5.55612 15.6077 8.47353 13 12 13ZM15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z"
                   fill="currentColor"
                 ></path>

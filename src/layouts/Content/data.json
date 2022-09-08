@@ -33,6 +33,36 @@
           "description": "Transfer to bank account"
         }
       ]
+    },
+    {
+      "id": "PLANNEDd",
+      "title": "agiang Tasks",
+
+      "style": {
+        "width": 280
+      },
+      "cards": [
+        {
+          "id": "Milk",
+          "title": "Buy milk",
+          "description": "2 Gallons of milk at the Deli store"
+        },
+        {
+          "id": "Plan2",
+          "title": "Dispose Garbage",
+          "description": "Sort out recyclable and waste as needed"
+        },
+        {
+          "id": "Plan3",
+          "title": "Write Blog",
+          "description": "Can AI make memes?"
+        },
+        {
+          "id": "Plan4",
+          "title": "Pay Rent",
+          "description": "Transfer to bank account"
+        }
+      ]
     }
   ]
 }

@@ -1,8 +1,14 @@
 import { Menu } from 'antd';
 import Layout, { Content, Header } from 'antd/lib/layout/layout';
+import { useState } from 'react';
 import ContentHead from './ContentHead';
 
-const MainSider = () => {
+const MainSider = (props: any) => {
+  const [sidervisible,setSiderVisible] = useState(true)
+
+  const onClose = () =>{
+    props.Closesider(false)
+  }
   return (
     <>
       <Layout
@@ -28,7 +34,7 @@ const MainSider = () => {
                   không gian làm việc của hoanggiangd13dt3
                 </p>
               </div>
-              <button className="bg-[transparent] hover:bg-[#808081] flex items-center m-0 p-[2px] rounded-[3px]">
+              <button className="bg-[transparent] hover:bg-[#808081] flex items-center m-0 p-[2px] rounded-[3px]" onClick={onClose}>
                 <img
                   className="brightness-0 invert"
                   src="https://a.trellocdn.com/prgb/dist/images/workspace-navigation/chevron-left.58243262833f693f6101.svg"
